@@ -5,10 +5,10 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-      - Clients
-      - VS Code
-      - IDE Extension
-      - HTTP Client
+  - Clients
+  - HTTP Client
+  - IDE Extension
+  - VS Code
 url: >-
   https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/apis.yml
 created: '2026-03-27'
@@ -21,10 +21,10 @@ apis:
       REST Client is a Visual Studio Code extension for sending HTTP requests and viewing responses directly within the editor.
     humanURL: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
     tags:
-        - Clients
-        - VS Code
-        - IDE Extension
-        - HTTP Client
+      - Clients
+      - HTTP Client
+      - IDE Extension
+      - VS Code
     properties:
       - type: Documentation
         url: https://github.com/Huachao/vscode-restclient#readme
