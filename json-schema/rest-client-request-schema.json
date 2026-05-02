@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marketplace.visualstudio.com/items/humao.rest-client/schemas/request",
+  "title": "REST Client HTTP Request",
+  "description": "Schema for an HTTP request as authored in a .http or .rest file using the VS Code REST Client extension.",
+  "type": "object",
+  "required": ["method", "url"],
+  "properties": {
+    "method": {
+      "type": "string",
+      "enum": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS", "CONNECT", "TRACE"],
+      "description": "The HTTP method for the request."
+    },
+    "url": {
+      "type": "string",
+      "description": "The full URL for the request, may include variable placeholders like {{host}}."
+    },
+    "httpVersion": {
+      "type": "string",
+      "enum": ["HTTP/1.1", "HTTP/2"],
+      "default": "HTTP/1.1",
+      "description": "HTTP protocol version."
+    },
+    "headers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "HTTP request headers as key-value pairs."
+    },
+    "body": {
+      "description": "The request body, as a string, JSON object, or GraphQL query.",
+      "oneOf": [
+        { "type": "string" },
+        { "type": "object" },
+        { "type": "array" }
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "Optional name for the request, used as a variable in request chaining (e.g., # @name myRequest)."
+    },
+    "variables": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "File-level variables defined with @variableName = value syntax."
+    },
+    "environment": {
+      "type": "string",
+      "description": "The active environment profile name providing variable values."
+    },
+    "graphql": {
+      "$ref": "#/$defs/GraphQLRequest"
+    }
+  },
+  "$defs": {
+    "GraphQLRequest": {
+      "title": "GraphQL Request",
+      "description": "GraphQL-specific request body structure.",
+      "type": "object",
+      "required": ["query"],
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "The GraphQL query or mutation string."
+        },
+        "variables": {
+          "type": "object",
+          "description": "Variable values for the GraphQL query."
+        },
+        "operationName": {
+          "type": "string",
+          "description": "Optional operation name for multi-operation documents."
+        }
+      }
+    }
+  }
+}

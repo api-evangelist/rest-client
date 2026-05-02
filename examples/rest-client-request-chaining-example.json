@@ -1,0 +1,12 @@
+{
+  "description": "REST Client VS Code extension example: request chaining to authenticate and then use the token.",
+  "fileFormat": ".http",
+  "content": "@host = https://api.example.com\n\n### Login - obtain access token\n# @name login\nPOST {{host}}/auth/token HTTP/1.1\nContent-Type: application/json\n\n{\n  \"username\": \"{{$dotenv USERNAME}}\",\n  \"password\": \"{{$dotenv PASSWORD}}\"\n}\n\n### Get Profile - use token from login response\nGET {{host}}/v1/me HTTP/1.1\nAuthorization: Bearer {{login.response.body.$.access_token}}\n\n### Create Resource - chained auth\n# @name createUser\nPOST {{host}}/v1/users HTTP/1.1\nContent-Type: application/json\nAuthorization: Bearer {{login.response.body.$.access_token}}\nX-Request-ID: {{$guid}}\n\n{\n  \"name\": \"New User\",\n  \"email\": \"newuser@example.com\"\n}",
+  "features": [
+    "File-level @host variable",
+    "Named request with # @name login",
+    "Response variable reference: {{login.response.body.$.access_token}}",
+    "System variable: {{$guid}} generates UUID",
+    "dotenv variable: {{$dotenv USERNAME}} reads from .env file"
+  ]
+}

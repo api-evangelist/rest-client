@@ -1,0 +1,94 @@
+{
+  "name": "REST Client HTTP Request",
+  "description": "Structure of an HTTP request authored in a .http or .rest file for the VS Code REST Client extension.",
+  "fields": [
+    {
+      "name": "method",
+      "type": "string",
+      "required": true,
+      "description": "HTTP method: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS."
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "required": true,
+      "description": "Request URL, may include {{variable}} placeholders."
+    },
+    {
+      "name": "httpVersion",
+      "type": "string",
+      "required": false,
+      "description": "HTTP version: HTTP/1.1 or HTTP/2."
+    },
+    {
+      "name": "headers",
+      "type": "object",
+      "required": false,
+      "description": "Request headers as key: value pairs, one per line."
+    },
+    {
+      "name": "body",
+      "type": "any",
+      "required": false,
+      "description": "Request body following a blank line after headers."
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "required": false,
+      "description": "Named request for variable extraction, set with # @name myRequest."
+    },
+    {
+      "name": "variables",
+      "type": "object",
+      "required": false,
+      "description": "File-level variables defined with @variableName = value.",
+      "fields": [
+        {
+          "name": "key",
+          "type": "string",
+          "description": "Variable name (without @ prefix)."
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "description": "Variable value or system variable reference."
+        }
+      ]
+    },
+    {
+      "name": "systemVariables",
+      "type": "array",
+      "required": false,
+      "description": "Built-in dynamic variables.",
+      "items": [
+        { "name": "$guid", "description": "Generates a new UUID v4." },
+        { "name": "$timestamp", "description": "Current Unix timestamp." },
+        { "name": "$datetime", "description": "Current date/time in ISO 8601." },
+        { "name": "$randomInt", "description": "Random integer 0–1000." },
+        { "name": "$processEnv", "description": "Value from OS environment variable." },
+        { "name": "$dotenv", "description": "Value from .env file variable." }
+      ]
+    },
+    {
+      "name": "graphql",
+      "type": "object",
+      "required": false,
+      "description": "GraphQL request body.",
+      "fields": [
+        {
+          "name": "query",
+          "type": "string",
+          "required": true,
+          "description": "GraphQL query or mutation string."
+        },
+        {
+          "name": "variables",
+          "type": "object",
+          "required": false,
+          "description": "GraphQL query variable values."
+        }
+      ]
+    }
+  ]
+}

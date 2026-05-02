@@ -1,0 +1,21 @@
+{
+  "description": "REST Client VS Code extension example: GET request with Bearer token authentication.",
+  "fileFormat": ".http",
+  "content": "### Get User by ID\nGET https://api.example.com/v1/users/42 HTTP/1.1\nAccept: application/json\nAuthorization: Bearer {{access_token}}\n\n### Get User List with Pagination\nGET https://api.example.com/v1/users?page=1&limit=20 HTTP/1.1\nAccept: application/json\nAuthorization: Bearer {{access_token}}",
+  "variables": {
+    "access_token": "eyJhbGciOiJSUzI1NiJ9..."
+  },
+  "environmentVariables": {
+    "$shared": {
+      "base_url": "https://api.example.com"
+    },
+    "development": {
+      "base_url": "http://localhost:3000",
+      "access_token": "dev-token-123"
+    },
+    "production": {
+      "base_url": "https://api.example.com",
+      "access_token": "prod-token-456"
+    }
+  }
+}

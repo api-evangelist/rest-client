@@ -1,0 +1,60 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "rc": "https://marketplace.visualstudio.com/items/humao.rest-client/vocab#",
+    "SoftwareApplication": "SoftwareApplication",
+    "name": "name",
+    "description": "description",
+    "url": "url",
+    "applicationCategory": "applicationCategory",
+    "operatingSystem": "operatingSystem",
+    "codeRepository": "codeRepository",
+    "license": "license",
+    "HttpRequest": {
+      "@id": "rc:HttpRequest",
+      "@type": "rdfs:Class"
+    },
+    "Environment": {
+      "@id": "rc:Environment",
+      "@type": "rdfs:Class"
+    },
+    "RequestVariable": {
+      "@id": "rc:RequestVariable",
+      "@type": "rdfs:Class"
+    },
+    "GraphQLRequest": {
+      "@id": "rc:GraphQLRequest",
+      "@type": "rdfs:Class"
+    },
+    "CurlCommand": {
+      "@id": "rc:CurlCommand",
+      "@type": "rdfs:Class"
+    },
+    "method": {
+      "@id": "rc:method"
+    },
+    "requestUrl": {
+      "@id": "rc:requestUrl"
+    },
+    "headers": {
+      "@id": "rc:headers"
+    },
+    "body": {
+      "@id": "rc:body"
+    },
+    "environment": {
+      "@id": "rc:environment",
+      "@type": "rc:Environment"
+    },
+    "variable": {
+      "@id": "rc:variable",
+      "@type": "rc:RequestVariable"
+    },
+    "responseReference": {
+      "@id": "rc:responseReference"
+    },
+    "authentication": {
+      "@id": "rc:authentication"
+    }
+  }
+}

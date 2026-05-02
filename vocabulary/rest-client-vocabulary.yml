@@ -1,0 +1,124 @@
+vocabulary:
+  name: REST Client Vocabulary
+  description: >-
+    Domain vocabulary for the REST Client VS Code extension by Huachao Mao,
+    covering HTTP request authoring in .http and .rest files, variable systems,
+    environment management, GraphQL support, and request chaining concepts.
+  created: '2026-05-02'
+  modified: '2026-05-02'
+  terms:
+    - term: HTTP File
+      definition: >-
+        A plain text file with .http or .rest extension that contains one or more
+        HTTP requests in RFC 2616 format, separated by ### delimiters. HTTP files
+        are the primary authoring format in REST Client.
+      tags:
+        - File Format
+        - Core Concept
+    - term: Request Delimiter
+      definition: >-
+        The ### separator used in .http files to delimit multiple HTTP requests
+        within a single file, optionally followed by a request name or comment.
+      tags:
+        - File Format
+        - Syntax
+    - term: Environment
+      definition: >-
+        A named configuration profile (e.g., "development", "staging",
+        "production") that provides variable values used in HTTP requests.
+        Environments are defined in VS Code settings under rest-client.environmentVariables.
+      tags:
+        - Configuration
+        - Variables
+    - term: File Variable
+      definition: >-
+        A request-file-scoped variable defined at the top of an .http file using
+        the syntax @variableName = value. File variables override environment
+        variables for the same name.
+      tags:
+        - Variables
+        - Syntax
+    - term: System Variable
+      definition: >-
+        A built-in dynamic variable provided by REST Client, such as {{$guid}}
+        for a new UUID, {{$timestamp}} for Unix time, {{$datetime}} for ISO 8601
+        date, {{$randomInt}} for a random integer, {{$processEnv NAME}} for OS
+        environment, and {{$dotenv NAME}} for .env file values.
+      tags:
+        - Variables
+        - Built-in
+    - term: Request Variable
+      definition: >-
+        A variable extracted from a named HTTP response, enabling request
+        chaining. Named with # @name requestLabel; referenced as
+        {{requestLabel.response.headers.Authorization}} or
+        {{requestLabel.response.body.$.token}}.
+      tags:
+        - Variables
+        - Request Chaining
+    - term: Request Chaining
+      definition: >-
+        The ability to reference values from prior HTTP responses in subsequent
+        requests, enabling multi-step API flows such as login then use token.
+        Achieved using request variables.
+      tags:
+        - Feature
+        - Workflow
+    - term: cURL Command
+      definition: >-
+        Command-line syntax for HTTP requests that REST Client can both execute
+        directly and convert to/from .http file format. REST Client supports
+        running curl commands and exporting requests as curl.
+      tags:
+        - Integration
+        - CLI
+    - term: Code Generation
+      definition: >-
+        REST Client's ability to export HTTP requests as code snippets in
+        languages including Python (requests), JavaScript (fetch, axios),
+        C# (HttpClient), Java (OkHttp), and others via the Code Snippet
+        command.
+      tags:
+        - Feature
+        - Developer Productivity
+    - term: GraphQL
+      definition: >-
+        REST Client supports GraphQL queries and mutations by sending the
+        query in the request body with Content-Type application/json and
+        a JSON body containing the query and optional variables fields.
+      tags:
+        - Protocol
+        - Feature
+    - term: Authentication
+      definition: >-
+        REST Client supports multiple authentication schemes set via the
+        Authorization header: Basic auth (Basic base64(user:pass)),
+        Digest auth, Bearer tokens, Azure Active Directory tokens,
+        AWS Signature v4, and AWS Cognito.
+      tags:
+        - Security
+        - Feature
+    - term: Response Reference
+      definition: >-
+        A JSONPath-style expression used in request variables to extract
+        specific values from a named request's response body, e.g.,
+        {{login.response.body.$.access_token}}.
+      tags:
+        - Variables
+        - JSONPath
+    - term: Certificate Authentication
+      definition: >-
+        SSL client certificate support in REST Client, configured per-host
+        with pfx/pem certificate paths and optional passphrase in VS Code
+        settings under rest-client.certificates.
+      tags:
+        - Security
+        - TLS
+    - term: Proxy Settings
+      definition: >-
+        HTTP/HTTPS proxy configuration for REST Client requests, set via
+        rest-client.proxy in VS Code settings or inherited from environment
+        variables http_proxy and https_proxy.
+      tags:
+        - Configuration
+        - Network
