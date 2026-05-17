@@ -44,13 +44,13 @@ apis:
     properties:
       - type: Documentation
         url: https://github.com/Huachao/vscode-restclient#readme
-      - type: Getting Started
+      - type: GettingStarted
         url: https://github.com/Huachao/vscode-restclient#usage
-      - type: GitHub Repository
+      - type: GitHubRepository
         url: https://github.com/Huachao/vscode-restclient
       - type: VS Code Marketplace
         url: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
-      - type: Changelog
+      - type: ChangeLog
         url: https://github.com/Huachao/vscode-restclient/blob/master/CHANGELOG.md
       - type: JSON Schema
         url: >-
@@ -69,7 +69,7 @@ common:
     url: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
   - type: Documentation
     url: https://github.com/Huachao/vscode-restclient#readme
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/Huachao/vscode-restclient
   - type: Vocabulary
     url: >-
