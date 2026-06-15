@@ -14,69 +14,71 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Clients
-  - HTTP Client
-  - IDE Extension
-  - VS Code
-  - API Testing
+- Clients
+- HTTP Client
+- IDE Extension
+- VS Code
+- API Testing
 url: >-
   https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/apis.yml
 created: '2026-03-27'
 modified: '2026-05-02'
 specificationVersion: '0.19'
 apis:
-  - aid: rest-client:rest-client
-    name: REST Client
-    description: >-
-      REST Client is a Visual Studio Code extension for sending HTTP requests
-      and viewing responses directly within the editor. It supports .http and
-      .rest file formats, GraphQL, cURL, multiple auth schemes, environment
-      variables, request chaining, and code generation.
-    humanURL: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
-    tags:
-      - Clients
-      - HTTP Client
-      - IDE Extension
-      - VS Code
-      - API Testing
-      - GraphQL
-      - cURL
-    properties:
-      - type: Documentation
-        url: https://github.com/Huachao/vscode-restclient#readme
-      - type: GettingStarted
-        url: https://github.com/Huachao/vscode-restclient#usage
-      - type: GitHubRepository
-        url: https://github.com/Huachao/vscode-restclient
-      - type: VS Code Marketplace
-        url: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
-      - type: ChangeLog
-        url: https://github.com/Huachao/vscode-restclient/blob/master/CHANGELOG.md
-      - type: JSON Schema
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/json-schema/rest-client-request-schema.json
-      - type: JSON Structure
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/json-structure/rest-client-request-structure.json
-      - type: Example
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/examples/rest-client-get-request-example.json
-      - type: Example
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/examples/rest-client-request-chaining-example.json
-common:
-  - type: Website
-    url: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+- aid: rest-client:rest-client
+  name: REST Client
+  description: >-
+    REST Client is a Visual Studio Code extension for sending HTTP requests
+    and viewing responses directly within the editor. It supports .http and
+    .rest file formats, GraphQL, cURL, multiple auth schemes, environment
+    variables, request chaining, and code generation.
+  humanURL: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+  tags:
+  - Clients
+  - HTTP Client
+  - IDE Extension
+  - VS Code
+  - API Testing
+  - GraphQL
+  - cURL
+  properties:
   - type: Documentation
     url: https://github.com/Huachao/vscode-restclient#readme
-  - type: GitHubOrganization
+  - type: GettingStarted
+    url: https://github.com/Huachao/vscode-restclient#usage
+  - type: GitHubRepository
     url: https://github.com/Huachao/vscode-restclient
-  - type: Vocabulary
+  - type: VS Code Marketplace
+    url: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+  - type: ChangeLog
+    url: https://github.com/Huachao/vscode-restclient/blob/master/CHANGELOG.md
+  - type: JSON Schema
     url: >-
-      https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/vocabulary/rest-client-vocabulary.yml
-  - type: JSON-LD Context
+      https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/json-schema/rest-client-request-schema.json
+  - type: JSON Structure
     url: >-
-      https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/json-ld/rest-client-context.jsonld
+      https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/json-structure/rest-client-request-structure.json
+  - type: Example
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/examples/rest-client-get-request-example.json
+  - type: Example
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/examples/rest-client-request-chaining-example.json
+  - url: graphql/rest-client-graphql.md
+    type: GraphQL
+common:
+- type: Website
+  url: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+- type: Documentation
+  url: https://github.com/Huachao/vscode-restclient#readme
+- type: GitHubOrganization
+  url: https://github.com/Huachao/vscode-restclient
+- type: Vocabulary
+  url: >-
+    https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/vocabulary/rest-client-vocabulary.yml
+- type: JSON-LD Context
+  url: >-
+    https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/json-ld/rest-client-context.jsonld
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
