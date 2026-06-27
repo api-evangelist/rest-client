@@ -52,16 +52,16 @@ apis:
     url: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
   - type: ChangeLog
     url: https://github.com/Huachao/vscode-restclient/blob/master/CHANGELOG.md
-  - type: JSON Schema
+  - type: JSONSchema
     url: >-
       https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/json-schema/rest-client-request-schema.json
-  - type: JSON Structure
+  - type: JSONStructure
     url: >-
       https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/json-structure/rest-client-request-structure.json
-  - type: Example
+  - type: Examples
     url: >-
       https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/examples/rest-client-get-request-example.json
-  - type: Example
+  - type: Examples
     url: >-
       https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/examples/rest-client-request-chaining-example.json
   - url: graphql/rest-client-graphql.md
@@ -76,7 +76,7 @@ common:
 - type: Vocabulary
   url: >-
     https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/vocabulary/rest-client-vocabulary.yml
-- type: JSON-LD Context
+- type: JSONLDContext
   url: >-
     https://raw.githubusercontent.com/api-evangelist/rest-client/refs/heads/main/json-ld/rest-client-context.jsonld
 maintainers:
