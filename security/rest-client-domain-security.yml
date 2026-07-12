@@ -1,0 +1,16 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: marketplace.visualstudio.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  6 13:38:08 2026 GMT
+  hsts: null
+domains:
+- domain: visualstudio.com
+  dnssec: false
+  caa:
+  - 0 contactemail "caarecordaware@microsoft.com"
+  spf: true
+  dmarc: false
