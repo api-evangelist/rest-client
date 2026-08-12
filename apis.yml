@@ -79,6 +79,9 @@ apis:
   - url: graphql/rest-client-graphql.md
     type: GraphQL
 common:
+- type: License
+  name: MIT
+  url: https://github.com/Huachao/vscode-restclient/blob/master/LICENSE
 - type: DomainSecurity
   url: security/rest-client-domain-security.yml
 - type: Website
