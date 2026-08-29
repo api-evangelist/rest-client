@@ -12,6 +12,18 @@ description: >-
   and is widely used as a lightweight alternative to dedicated API clients like
   Postman and Insomnia.
 type: Index
+deliveryModel:
+  model: self-hosted
+  license: MIT
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
@@ -79,6 +91,12 @@ apis:
   - url: graphql/rest-client-graphql.md
     type: GraphQL
 common:
+- type: IssueTracker
+  url: https://github.com/Huachao/vscode-restclient/issues
+- type: Releases
+  url: https://github.com/Huachao/vscode-restclient/releases
+- type: CodeOfConduct
+  url: https://github.com/Huachao/vscode-restclient/blob/master/CODE_OF_CONDUCT.md
 - type: License
   name: MIT
   url: https://github.com/Huachao/vscode-restclient/blob/master/LICENSE
