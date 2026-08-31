@@ -64,6 +64,14 @@ apis:
   - VS Code
   - API Testing
   - GraphQL
+  - CURL
+  tags_raw:
+  - Clients
+  - HTTP Client
+  - IDE Extension
+  - VS Code
+  - API Testing
+  - GraphQL
   - cURL
   properties:
   - type: Documentation
