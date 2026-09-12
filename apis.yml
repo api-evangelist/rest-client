@@ -125,3 +125,5 @@ common:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-parent: vs-code-marketplace
+x-relationship: product
